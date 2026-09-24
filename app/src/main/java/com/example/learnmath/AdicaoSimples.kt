@@ -6,9 +6,11 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.activity.ComponentActivity
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import android.widget.Toast
 import kotlin.random.Random
 
 
@@ -23,10 +25,15 @@ class AdicaoSimples : ComponentActivity() {
     var n1: Int = 0
     var n2: Int = 0
 
+    private var nivel: String = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.adicao_simples)
+
+        nivel = intent.getStringExtra("nivel") ?: ""
+        findViewById<TextView>(R.id.tvInf).text = "Nivel: $nivel"
 
         val btnBack = findViewById<Button>(R.id.btnBack)
         val btnHome = findViewById<Button>(R.id.btnHome)
@@ -47,7 +54,7 @@ class AdicaoSimples : ComponentActivity() {
         )
         botoes.forEachIndexed { index, botao ->
             botao.setOnClickListener {
-                verificarResultado(index + 1)
+                verificarResultado(index + 1, botao.id)
             }
         }
 
@@ -73,10 +80,17 @@ class AdicaoSimples : ComponentActivity() {
 
     }
     private fun NovoCalculo(){
+
+        var max:Int = 9
+        if(nivel == "Fácil"){
+            max = 5
+        }
+
+
         do {
-            n1 = Random.nextInt(from = 1, until = 9)
-            n2 = Random.nextInt(from = 1, until = 9)
-        } while (n1 + n2 > 9)
+            n1 = Random.nextInt(from = 1, until = max)
+            n2 = Random.nextInt(from = 1, until = max)
+        } while (n1 + n2 >= 10)
 
         val tvN1 = findViewById<TextView>(R.id.tvN1)
         val tvN2 = findViewById<TextView>(R.id.tvN2)
@@ -86,9 +100,10 @@ class AdicaoSimples : ComponentActivity() {
 
         tvN1.setBackgroundColor(android.graphics.Color.TRANSPARENT)
         tvN2.setBackgroundColor(android.graphics.Color.TRANSPARENT)
+
     }
 
-    private fun verificarResultado(valor: Int) {
+    private fun verificarResultado(valor: Int, botaoId: Int) {
         val soma = n1 + n2
 
         val tvN1 = findViewById<TextView>(R.id.tvN1)
@@ -97,14 +112,21 @@ class AdicaoSimples : ComponentActivity() {
         if (valor == soma) {
             tvN1.setBackgroundColor(android.graphics.Color.GREEN)
             tvN2.setBackgroundColor(android.graphics.Color.GREEN)
+            findViewById<Button>(botaoId).setBackgroundColor(android.graphics.Color.GREEN)
+
+
+            Toast.makeText(this, "Correto!", Toast.LENGTH_SHORT).show()
+
+
         } else {
             tvN1.setBackgroundColor(android.graphics.Color.RED)
             tvN2.setBackgroundColor(android.graphics.Color.RED)
+            findViewById<Button>(botaoId).setBackgroundColor(android.graphics.Color.RED)
+
+            Toast.makeText(this, "Tente Novamente!", Toast.LENGTH_SHORT).show()
         }
+
     }
-
-
-
 }
 
 

@@ -17,12 +17,37 @@ class menuAdicao : ComponentActivity() {
         setContentView(R.layout.menu_adicao)
 
         val btnAdd = findViewById<Button>(R.id.btnAddN1)
+        val btnAdd2 = findViewById<Button>(R.id.btnAddN2)
         val btnBack = findViewById<Button>(R.id.btnAddBack)
+        val btnAddN3 = findViewById<Button>(R.id.btnAddN3)
 
         btnAdd.setOnClickListener {
             val intent = Intent(this, AdicaoSimples::class.java)
+
+            intent.putExtra("nivel", "Fácil")
+
+
             startActivity(intent)
         }
+
+        btnAdd2.setOnClickListener {
+
+            val intent = Intent(this, AdicaoSimples::class.java)
+
+            intent.putExtra("nivel", "Médio"   )
+
+
+            startActivity(intent)
+
+        }
+
+        btnAddN3.setOnClickListener {
+            val intent = Intent(this, AdicaoAvancado::class.java)
+
+            startActivity(intent)
+        }
+
+
         btnBack.setOnClickListener {
            this.finish()
         }
