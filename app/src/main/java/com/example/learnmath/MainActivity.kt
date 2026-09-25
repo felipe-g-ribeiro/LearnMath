@@ -22,10 +22,17 @@ class MainActivity : ComponentActivity() {
         setContentView(R.layout.menu)
 
         val btnAdd = findViewById<Button>(R.id.btnAdd)
+        val btnAdd2 = findViewById<Button>(R.id.bntSub)
 
         btnAdd.setOnClickListener {
             val intent = Intent(this, menuAdicao::class.java)
             startActivity(intent)
+        }
+
+        btnAdd2.setOnClickListener {
+            val intent = Intent(this, Subtracao::class.java)
+            startActivity(intent)
+
         }
 
     }

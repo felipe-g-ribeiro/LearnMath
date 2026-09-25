@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo02"
+    android:scrollbarSize="40dp"
+    android:scrollbarStyle="insideInset"
+    tools:context=".Subtracao">
+
+    <!-- TÍTULO -->
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="SUBTRAÇÃO"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="29sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- NÍVEL -->
+    <TextView
+        android:id="@+id/tvNivel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Nível: Fácil"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView10" />
+
+    <!-- PRIMEIRO NÚMERO -->
+
+    <!-- SEGUNDO NÚMERO -->
+    <TextView
+        android:id="@+id/tvS1"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="50dp"
+        android:background="@android:color/transparent"
+        android:text="10"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.134"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvNivel" />
+
+    <!-- BOTÃO RESPOSTA 1 (iOS STYLE) -->
+    <TextView
+        android:id="@+id/tvS2"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="50dp"
+        android:background="@android:color/transparent"
+        android:text="5"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.845"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNivel" />
+
+    <Button
+        android:id="@+id/btnS1"
+        android:layout_width="345dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/botao_azul"
+        android:elevation="6dp"
+        android:padding="10dp"
+        android:stateListAnimator="@null"
+        android:text="5"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvS2" />
+
+    <!-- BOTÃO RESPOSTA 2 (iOS STYLE) -->
+    <Button
+        android:id="@+id/btnS2"
+        android:layout_width="345dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/botao_colorido"
+        android:elevation="6dp"
+        android:padding="10dp"
+        android:stateListAnimator="@null"
+        android:text="10"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnS1" />
+
+    <!-- BOTÃO RESPOSTA 3 (iOS STYLE) -->
+    <Button
+        android:id="@+id/btnS3"
+        android:layout_width="345dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/botao_rosa"
+        android:elevation="6dp"
+        android:padding="10dp"
+        android:stateListAnimator="@null"
+        android:text="15"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnS2" />
+
+    <!-- BOTÃO NOVO -->
+    <Button
+        android:id="@+id/btnNovoS"
+        android:layout_width="166dp"
+        android:layout_height="114dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/estrela"
+        android:rotationX="10"
+        android:text="NOVO"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnS3" />
+
+    <!-- BOTÃO INÍCIO -->
+    <Button
+        android:id="@+id/subInicio"
+        android:layout_width="284dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/botaominus"
+        android:text="INICIO"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="40dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="40dp"
+        android:text="-"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvS2"
+        app:layout_constraintStart_toEndOf="@+id/tvS1"
+        app:layout_constraintTop_toBottomOf="@+id/tvNivel" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:progressDrawable="@android:drawable/progress_horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/subInicio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNovoS" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
