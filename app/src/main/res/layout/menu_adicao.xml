@@ -71,11 +71,11 @@
 
     <Button
         android:id="@+id/btnAddBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="101dp"
+        android:layout_height="64dp"
         android:layout_marginStart="32dp"
         android:layout_marginBottom="32dp"
-        android:background="@color/purple_700"
+        android:background="@drawable/botaoplus"
         android:text="VOLTAR"
         android:textAllCaps="true"
         android:textColor="@color/white"
