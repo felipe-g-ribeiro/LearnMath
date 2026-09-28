@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.LearnMath" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.LearnMath" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:colorBackground">@color/purple_plum_crazy</item>
+    </style>
 </resources>

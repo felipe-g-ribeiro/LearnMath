@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="260dp"
         android:fontFamily="@font/adlam_display"
-        android:text="Aprender Matemática"
+        android:text="@string/learn_math"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/black"
@@ -24,7 +24,7 @@
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="De Forma Simples"
+        android:text="@string/SubTituloMenu"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="24sp" />
@@ -36,7 +36,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:background="@drawable/botaoplus"
-        android:text="Adição"
+        android:text="@string/addition"
         android:textColor="@color/white" />
 
     <Button
@@ -46,7 +46,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:background="@drawable/botaominus"
-        android:text="Subtração"
+        android:text="@string/subtraction"
         android:textColor="@color/white"/>
 
 

@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Learn Math</string>
+    <string name="learn_math">Learn Math</string>
+    <string name="SubTituloMenu">In a Simple Way</string>
+    <string name="addition">Addition</string>
+    <string name="subtraction">Subtraction</string>
+    <string name="easy">EASY</string>
+    <string name="medium">MEDIUM</string>
+    <string name="advanced">ADVANCED</string>
+    <string name="back">BACK</string>
 </resources>

@@ -25,6 +25,9 @@ class Subtracao : ComponentActivity() {
 
         setContentView(R.layout.subtracao)
 
+        val titulo = findViewById<TextView>(R.id.textView10)
+        titulo.text = textoColoridoAleatorio("SUBTRAÇÃO")
+
         barra = findViewById(R.id.progressBar)
         barra.max = 100
         barra.progress = 0
@@ -137,5 +140,25 @@ class Subtracao : ComponentActivity() {
                 barra.progress = progresso
             }
         }
+    }
+
+    private fun textoColoridoAleatorio(texto: String): CharSequence {
+        val spannable = android.text.SpannableString(texto)
+
+        texto.forEachIndexed { i, _ ->
+            val cor = android.graphics.Color.rgb(
+                (0..255).random(),
+                (0..255).random(),
+                (0..255).random()
+            )
+
+            spannable.setSpan(
+                android.text.style.ForegroundColorSpan(cor),
+                i, i + 1,
+                android.text.Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+            )
+        }
+
+        return spannable
     }
 }
