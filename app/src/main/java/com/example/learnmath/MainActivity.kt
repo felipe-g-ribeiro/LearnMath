@@ -34,7 +34,13 @@ class MainActivity : ComponentActivity() {
             startActivity(intent)
 
         }
-
+        findViewById<Button>(R.id.btnCalc).setOnClickListener {
+            val intent = Intent(this, menuCalculos::class.java)
+            startActivity(intent)
+        }
     }
+
+
+
 }
 
