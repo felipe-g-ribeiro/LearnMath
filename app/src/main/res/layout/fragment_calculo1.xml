@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/frame1"
@@ -8,28 +9,152 @@
     android:background="@drawable/div_mult_back"
     tools:context=".Calculo1">
 
-    <!-- TODO: Update blank fragment layout -->
+
     <TextView
-        android:id="@+id/titulo1"
-        android:layout_width="197dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="88dp"
-        android:text="Calculo 1"
-        android:textAlignment="center"
-        android:textSize="34sp"
+        android:id="@+id/tituloMultiplicacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:text="multiplication"
+        android:textColor="#2D3748"
+        android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+    <TextView
+        android:id="@+id/tvM2"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="48dp"
+        android:text="2"
+        android:textAlignment="center"
+        android:textColor="@color/purple_700"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tituloMultiplicacao" />
+
+
+    <TextView
+        android:id="@+id/X_semFuncao"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="32dp"
+        android:text="X"
+        android:textAlignment="center"
+        android:textColor="@color/purple_700"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tvM2"
+        app:layout_constraintStart_toEndOf="@+id/tvM1"
+        app:layout_constraintTop_toBottomOf="@+id/tituloMultiplicacao" />
+
+    <TextView
+        android:id="@+id/tvM1"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="32dp"
+        android:text="3"
+        android:textAlignment="center"
+        android:textColor="@color/purple_700"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tituloMultiplicacao" />
+
     <Button
-        android:id="@+id/btnTeste"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="59dp"
-        android:text="Button"
+        android:id="@+id/btnM1"
+        android:layout_width="90dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/btn_blue"
+        android:textColor="#2D3748"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toStartOf="@id/btnM2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvM1" />
+
+
+    <Button
+        android:id="@+id/btnM2"
+        android:layout_width="90dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/btn_blue"
+        android:textColor="#2D3748"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toStartOf="@id/btnM3"
+        app:layout_constraintStart_toEndOf="@id/btnM1"
+        app:layout_constraintTop_toBottomOf="@id/tvM1" />
+
+
+    <Button
+        android:id="@+id/btnM3"
+        android:layout_width="90dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/btn_blue"
+        android:textColor="#2D3748"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnM2"
+        app:layout_constraintTop_toBottomOf="@id/tvM1" />
+
+
+    <Button
+        android:id="@+id/btnNovoM"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/btn_green"
+        android:text="@string/new_challenge"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titulo1" />
+        app:layout_constraintTop_toBottomOf="@+id/btnM2" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="90dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/robo_feliz"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNovoM" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="90dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/robo_try"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNovoM" />
+
+    <TextView
+        android:id="@+id/txtIncentivo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Test"
+        android:textColor="#2D3748"
+        android:textSize="48sp"
+
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/imageView4"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/btnNovoM" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

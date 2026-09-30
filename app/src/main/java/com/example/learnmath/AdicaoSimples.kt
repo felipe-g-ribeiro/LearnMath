@@ -5,11 +5,6 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.activity.ComponentActivity
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import android.widget.Toast
 import kotlin.random.Random
 
@@ -39,7 +34,7 @@ class AdicaoSimples : ComponentActivity() {
         val btnHome = findViewById<Button>(R.id.btnHome)
 
         val tvN1 = findViewById<TextView>(R.id.tvN1)
-        val tvN2 = findViewById<TextView>(R.id.tvN2)
+        val tvN2 = findViewById<TextView>(R.id.tvM2)
 
         val botoes = listOf(
             findViewById<Button>(R.id.btnN1),
@@ -93,7 +88,7 @@ class AdicaoSimples : ComponentActivity() {
         } while (n1 + n2 >= 10)
 
         val tvN1 = findViewById<TextView>(R.id.tvN1)
-        val tvN2 = findViewById<TextView>(R.id.tvN2)
+        val tvN2 = findViewById<TextView>(R.id.tvM2)
 
         tvN1.text = n1.toString()
         tvN2.text = n2.toString()
@@ -107,7 +102,7 @@ class AdicaoSimples : ComponentActivity() {
         val soma = n1 + n2
 
         val tvN1 = findViewById<TextView>(R.id.tvN1)
-        val tvN2 = findViewById<TextView>(R.id.tvN2)
+        val tvN2 = findViewById<TextView>(R.id.tvM2)
 
         if (valor == soma) {
             tvN1.setBackgroundColor(android.graphics.Color.GREEN)

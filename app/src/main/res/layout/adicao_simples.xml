@@ -57,7 +57,7 @@
         app:layout_constraintVertical_bias="0.888" />
 
     <TextView
-        android:id="@+id/tvN2"
+        android:id="@+id/tvM2"
         android:layout_width="87dp"
         android:layout_height="87dp"
         android:layout_marginStart="24dp"
