@@ -2,6 +2,6 @@
 <resources>
 
     <style name="Theme.LearnMath" parent="Theme.AppCompat.DayNight.NoActionBar">
-        <item name="android:colorBackground">@color/purple_plum_crazy</item>
+        <item name="android:colorBackground">@color/purple_700</item>
     </style>
 </resources>

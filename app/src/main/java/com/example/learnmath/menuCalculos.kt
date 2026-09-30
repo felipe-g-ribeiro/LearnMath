@@ -22,7 +22,7 @@ class menuCalculos : AppCompatActivity() {
 
         viewPager.adapter = PagerAdapter(this)
 
-        viewPager.setCurrentItem(1, true)
+        viewPager.setCurrentItem(0, true)
 
 
 
