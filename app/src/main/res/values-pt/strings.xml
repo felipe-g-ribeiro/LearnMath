@@ -11,5 +11,7 @@
     <string name="back">Voltar</string>
     <string name="others">Outros</string>
     <string name="new_challenge">Novo Desafio</string>
-    <string name="multiplication">Multiplicação</string>"
+    <string name="multiplication">Multiplicação</string>
+    <string name="x">X</string>"
+    <string name="test">Teste</string>
 </resources>

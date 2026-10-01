@@ -10,9 +10,11 @@
     <string name="back">BACK</string>
     <string name="others">Others</string>
     <string name="new_challenge">New Challenge</string>
-    <string name="multiplication">Multiplication</string>
+    <string name="multiplication">MULTIPLICATION</string>
+    <string name="x">X</string>
+    <string name="test">Test</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 
 </resources>

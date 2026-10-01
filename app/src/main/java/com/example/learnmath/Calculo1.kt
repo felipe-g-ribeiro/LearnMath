@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.RatingBar
 import android.widget.TextView
 import kotlin.random.Random
 
@@ -57,7 +58,7 @@ class Calculo1 : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Referências dos elementos
+
 
         val btnM1 = view.findViewById<Button>(R.id.btnM1)
         val btnM2 = view.findViewById<Button>(R.id.btnM2)
@@ -68,16 +69,40 @@ class Calculo1 : Fragment() {
         val roboTriste = view.findViewById<ImageView>(R.id.imageView4)
         val txtIncentivo = view.findViewById<TextView>(R.id.txtIncentivo)
 
-        // -----------------------------
-        // FUNÇÃO: GERAR NOVO DESAFIO
-        // -----------------------------
+        val ratingBar = view.findViewById<RatingBar>(R.id.ratingBar)
+
+
+
         fun novoCalculo() {
+
+
+            btnM1.isEnabled = true
+            btnM2.isEnabled = true
+            btnM3.isEnabled = true
+
+            btnM1.setBackgroundColor(Color.LTGRAY)
+            btnM2.setBackgroundColor(Color.LTGRAY)
+            btnM3.setBackgroundColor(Color.LTGRAY)
+
             roboFeliz.visibility = View.GONE
             roboTriste.visibility = View.GONE
             txtIncentivo.visibility = View.GONE
 
-            n1 = Random.nextInt(1, 10)
-            n2 = Random.nextInt(1, 10)
+            // Dificuldade baseada no rating
+            val dificuldade = ratingBar.rating.toInt()
+
+            // Quanto maior o rating, maior o intervalo dos números
+            val maxValor = when (dificuldade) {
+                0 -> 5
+                1 -> 7
+                2 -> 8
+                3 -> 9
+                4 -> 10
+                else -> 10
+            }
+
+            n1 = Random.nextInt(1, maxValor)
+            n2 = Random.nextInt(1, maxValor)
             resultado = n1 * n2
 
             val tvM1 = view.findViewById<TextView>(R.id.tvM1)
@@ -91,7 +116,7 @@ class Calculo1 : Fragment() {
             val respostas = mutableListOf(
                 resultado,
                 resultado + Random.nextInt(1, 4),
-                resultado - Random.nextInt(1, 4)
+                (resultado - Random.nextInt(1, 4)).coerceAtLeast(1)
             ).shuffled()
 
             btnM1.text = respostas[0].toString()
@@ -102,13 +127,33 @@ class Calculo1 : Fragment() {
 
         fun verificarResposta(valor: Int) {
 
+
+            btnM1.isEnabled = false
+            btnM2.isEnabled = false
+            btnM3.isEnabled = false
+
+            btnM1.setBackgroundColor(Color.LTGRAY)
+            btnM2.setBackgroundColor(Color.LTGRAY)
+            btnM3.setBackgroundColor(Color.LTGRAY)
+
+
+            when (valor) {
+                btnM1.text.toString().toInt() -> btnM1.setBackgroundColor(Color.CYAN)
+                btnM2.text.toString().toInt() -> btnM2.setBackgroundColor(Color.CYAN)
+                btnM3.text.toString().toInt() -> btnM3.setBackgroundColor(Color.CYAN)
+            }
+
             if (valor == resultado) {
                 roboFeliz.visibility = View.VISIBLE
                 roboTriste.visibility = View.GONE
 
                 txtIncentivo.visibility = View.VISIBLE
                 txtIncentivo.text = "Parabéns!"
-                txtIncentivo.setTextColor(Color.parseColor("#2ECC71"))
+                txtIncentivo.setTextColor(Color.parseColor("#009739"))
+
+                if (ratingBar.rating < ratingBar.numStars) {
+                    ratingBar.rating += 1
+                }
 
             } else {
                 roboFeliz.visibility = View.GONE

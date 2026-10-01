@@ -4,4 +4,9 @@
     <style name="Theme.LearnMath" parent="Theme.AppCompat.DayNight.NoActionBar">
         <item name="android:colorBackground">@color/purple_700</item>
     </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/material_dynamic_neutral60</item>
+        <item name="colorControlActivated">?android:attr/colorPressedHighlight</item>
+    </style>
 </resources>
