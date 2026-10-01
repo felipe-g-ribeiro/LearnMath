@@ -44,7 +44,7 @@
             app:layout_constraintBottom_toBottomOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- ❤️ Vidas -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/vidasContainer"
         android:layout_width="wrap_content"
@@ -61,7 +61,7 @@
             android:id="@+id/coracao1"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:src="@drawable/ic_coracao"
+            android:src="@drawable/coracao"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
@@ -70,7 +70,7 @@
             android:id="@+id/coracao2"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:src="@drawable/ic_coracao"
+            android:src="@drawable/coracao"
             app:layout_constraintStart_toEndOf="@id/coracao1"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -80,7 +80,7 @@
             android:id="@+id/coracao3"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:src="@drawable/ic_coracao"
+            android:src="@drawable/coracao"
             app:layout_constraintStart_toEndOf="@id/coracao2"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -113,5 +113,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="4dp"/>
+
+    <ProgressBar
+        android:id="@+id/barDiv"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="362dp"
+        android:layout_height="0dp"
+
+        android:layout_marginStart="16dp"
+
+        android:layout_marginTop="16dp"
+
+        android:layout_marginEnd="16dp"
+        android:progress="50"
+        android:progressDrawable="@android:drawable/progress_horizontal"
+
+        android:progressTint="@android:color/holo_orange_dark"
+
+
+        android:radius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvdNivel" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
