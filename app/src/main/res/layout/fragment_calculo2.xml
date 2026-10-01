@@ -138,6 +138,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvdNivel" />
 
     <TableLayout
+        android:id="@+id/tableLayout2"
         android:layout_width="331dp"
         android:layout_height="119dp"
         android:layout_marginStart="32dp"
@@ -151,9 +152,9 @@
         <TableRow android:gravity="center">
 
             <TextView
+                android:paddingTop="12dp"
                 android:text="QUANTO É?"
                 android:textAlignment="center"
-                android:paddingTop="12dp"
                 android:textColor="#8B6B00"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -209,6 +210,90 @@
 
 
     </TableLayout>
+
+    <TableLayout
+        android:layout_width="320dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout2">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/botao_verde"
+                android:text="Button" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/botao_rosa"
+                android:text="Button" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/botao_colorido"
+                android:text="Button" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="137dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/botao_azul"
+                android:text="Button" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="217dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/btn_orange"
+
+
+        android:text="Próxima Pergunta"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

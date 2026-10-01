@@ -10,8 +10,8 @@ class PagerAdapter(activity: FragmentActivity) : FragmentStateAdapter(activity) 
 
     override fun createFragment(position:Int): Fragment {
         return when(position) {
-            0 -> Calculo1()
-            1 -> Calculo2()
+            1 -> Calculo1()
+            0 -> Calculo2()
 
             else-> throw IllegalStateException("Posição inválida: $position")
         }
