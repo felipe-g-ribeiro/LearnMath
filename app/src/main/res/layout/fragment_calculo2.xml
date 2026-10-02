@@ -115,7 +115,7 @@
         android:layout_marginTop="4dp"/>
 
     <ProgressBar
-        android:id="@+id/barDiv"
+        android:id="@+id/tvdBarraDiv"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="362dp"
         android:layout_height="0dp"
@@ -147,7 +147,7 @@
         android:background="@drawable/bg_progresso"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/barDiv">
+        app:layout_constraintTop_toBottomOf="@+id/tvdBarraDiv">
 
         <TableRow android:gravity="center">
 
@@ -166,6 +166,7 @@
             android:gravity="center">
 
             <TextView
+                android:id="@+id/tvdNumero1"
                 android:layout_width="match_parent"
                 android:paddingEnd="8dp"
                 android:text="20"
@@ -174,6 +175,8 @@
                 android:textSize="48sp" />
 
             <TextView
+
+                android:id="@+id/tvdOperador"
                 android:layout_width="match_parent"
                 android:paddingEnd="8dp"
                 android:text="÷"
@@ -182,16 +185,20 @@
                 android:textSize="48sp" />
 
             <TextView
+
+                android:id="@+id/tvdNumero2"
                 android:layout_width="79dp"
 
                 android:layout_height="match_parent"
                 android:paddingEnd="8dp"
-                android:text="20"
+                android:text="10"
                 android:textAlignment="center"
                 android:textColor="#6B4A00"
                 android:textSize="48sp" />
 
             <TextView
+
+                android:id="@+id/tvdIgual"
                 android:layout_width="43dp"
                 android:layout_height="wrap_content"
                 android:paddingEnd="8dp"
@@ -201,6 +208,8 @@
                 android:textSize="48sp" />
 
             <TextView
+
+                android:id="@+id/tvdResultado"
                 android:layout_width="29dp"
                 android:text="?"
                 android:textAlignment="center"
@@ -227,12 +236,11 @@
             android:layout_weight="1">
 
             <Button
-                android:id="@+id/button4"
+                android:id="@+id/tvdOpcao4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/botao_verde"
-                android:text="Button" />
+                android:background="@drawable/botao_verde" />
         </TableRow>
 
         <TableRow
@@ -241,12 +249,11 @@
             android:layout_weight="1">
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/tvdOpcao3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/botao_rosa"
-                android:text="Button" />
+                android:background="@drawable/botao_rosa" />
         </TableRow>
 
         <TableRow
@@ -255,12 +262,11 @@
             android:layout_weight="1">
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/tvdOpcao2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/botao_colorido"
-                android:text="Button" />
+                android:background="@drawable/botao_colorido" />
         </TableRow>
 
         <TableRow
@@ -269,17 +275,16 @@
             android:layout_weight="1">
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/tvdOpcao1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/botao_azul"
-                android:text="Button" />
+                android:background="@drawable/botao_azul" />
         </TableRow>
     </TableLayout>
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/tvdProxima"
         android:layout_width="217dp"
         android:layout_height="54dp"
         android:layout_marginBottom="32dp"
