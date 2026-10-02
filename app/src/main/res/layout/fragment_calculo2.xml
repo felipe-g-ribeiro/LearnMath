@@ -92,7 +92,7 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Divisão"
+        android:text="@string/division"
         android:textColor="@android:color/holo_orange_dark"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -106,7 +106,7 @@
         android:id="@+id/tvdNivel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nível 2"
+        android:text="@string/level_2"
         android:textColor="#5C3A00"
         android:textSize="14sp"
         app:layout_constraintTop_toBottomOf="@id/textView8"
@@ -152,7 +152,7 @@
 
             <TextView
                 android:paddingTop="12dp"
-                android:text="QUANTO É?"
+                android:text="@string/how_much"
                 android:textAlignment="center"
                 android:textColor="#8B6B00"
                 android:textSize="16sp"
@@ -290,7 +290,7 @@
         android:background="@drawable/btn_orange"
 
 
-        android:text="Próxima Pergunta"
+        android:text="@string/next_question"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textStyle="bold"

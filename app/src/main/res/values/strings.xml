@@ -13,6 +13,10 @@
     <string name="multiplication">MULTIPLICATION</string>
     <string name="x">X</string>
     <string name="test">Test</string>
+    <string name="division">Division</string>
+    <string name="level_2">Level 2</string>
+    <string name="how_much">How much is it?</string>
+    <string name="next_question">Next Question</string>
 
     <!-- TODO: Remove or change this placeholder text -->
 

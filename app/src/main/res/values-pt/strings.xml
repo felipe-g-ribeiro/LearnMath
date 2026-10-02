@@ -14,4 +14,8 @@
     <string name="multiplication">Multiplicação</string>
     <string name="x">X</string>"
     <string name="test">Teste</string>
+    <string name="division">Divisão</string>
+    <string name="level_2">Nível 2</string>
+    <string name="how_much">Quanto é ?</string>
+    <string name="next_question">Próxima Pergunta</string>"
 </resources>
