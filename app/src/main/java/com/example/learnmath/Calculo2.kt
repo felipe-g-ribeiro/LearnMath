@@ -45,8 +45,8 @@ class Calculo2 : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val tvNumero1 = view.findViewById<TextView>(R.id.tvdNumero1)
-        val tvNumero2 = view.findViewById<TextView>(R.id.tvdNumero2)
+        val tvNumero1 = view.findViewById<TextView>(R.id.tvM1)
+        val tvNumero2 = view.findViewById<TextView>(R.id.tvM2)
         val tvOperador = view.findViewById<TextView>(R.id.tvdOperador)
         val tvResultado = view.findViewById<TextView>(R.id.tvdResultado)
         val tvProgresso = view.findViewById<TextView>(R.id.tvProgresso)

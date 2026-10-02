@@ -165,7 +165,7 @@
             android:gravity="center">
 
             <TextView
-                android:id="@+id/tvdNumero1"
+                android:id="@+id/tvM1"
                 android:layout_width="match_parent"
                 android:paddingEnd="8dp"
                 android:text="20"
@@ -185,7 +185,7 @@
 
             <TextView
 
-                android:id="@+id/tvdNumero2"
+                android:id="@+id/tvM2"
                 android:layout_width="79dp"
 
                 android:layout_height="match_parent"
