@@ -177,34 +177,20 @@
         app:layout_constraintStart_toEndOf="@+id/imageView3"
         app:layout_constraintTop_toBottomOf="@+id/btnNovoM" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="550dp"
-        android:layout_marginTop="8dp"
-        android:adjustViewBounds="true"
-        android:scaleType="fitXY"
-        android:src="@drawable/faixa_azul"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnNovoM" />
-
     <RatingBar
         android:id="@+id/ratingBar"
-        android:layout_width="193dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="215dp"
+        android:layout_width="237dp"
+        android:layout_height="56dp"
         android:layout_marginBottom="32dp"
 
+        android:background="@drawable/bg_progresso"
         android:isIndicator="true"
         android:numStars="5"
         android:stepSize="1"
         android:theme="@style/RatingBar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 
